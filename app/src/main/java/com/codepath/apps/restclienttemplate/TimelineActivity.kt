@@ -1,5 +1,7 @@
 package com.codepath.apps.restclienttemplate
 
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.DrawableContainer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -28,6 +30,8 @@ class TimelineActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_timeline)
+
+        getSupportActionBar()?.setBackgroundDrawable(ColorDrawable(Color.parseColor("#1DA1F2")))
 
         client = TwitterApplication.getRestClient(this)
 
